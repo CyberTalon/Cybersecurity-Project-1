@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![Topology](Diagrams/Azure_Cloud_Network_Security_Diagram_With_Elk.JPG)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
   ![Filebeat Playbook](Ansible/Filebeat/filebeat-playbook.yml)
 
@@ -21,11 +21,11 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly _____, in addition to restricting _____ to the network.
+Load balancing ensures that the application will be highly available, in addition to restricting ibound access to the network.
 - Load balancing is the process of distributing network traffic across multiple servers. This ensures no single server bears too much demand. By spreading the work evenly, load balancing improves application responsiveness. In a security aspect, load balancers can defend an organization against denial-of-service (DDos) attacks.
 - Jump box's provide an additional layer of security from the public internet by controlling access to the other machines by allowing connections from specific IP addresses and forwarding to those machines.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file systems and system metrics.
 - Filebeat collects data about the file system.
 - Metricbeat collects machine metrics, such as uptime.
 
@@ -46,7 +46,7 @@ The machines on the internal network are not exposed to the public Internet.
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _TODO: Add whitelisted IP addresses_
 
-Machines within the network can only be accessed by _____.
+Machines within the network can only be accessed by the Jumop Box.
 - Only the Jump Box has access to the ELK VM 10.2.0.4
 
 A summary of the access policies in place can be found in the table below.
@@ -74,7 +74,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![Docker PS](https://user-images.githubusercontent.com/75605065/112704805-f5b62f80-8e69-11eb-8e38-b9d2ea227081.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
