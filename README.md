@@ -44,7 +44,7 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- My IP Address
 
 Machines within the network can only be accessed by the Jumop Box.
 - Only the Jump Box has access to the ELK VM 10.2.0.4
